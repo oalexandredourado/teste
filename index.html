@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mock Página de Reunião – Estilo Notion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f7f7f5;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="bg-white border-b px-6 py-3 flex gap-4 text-sm">
+  <button onclick="showModel(1)" class="hover:underline">Modelo 1 – Escrita Central</button>
+  <button onclick="showModel(2)" class="hover:underline">Modelo 3 – Linha do Tempo</button>
+  <button onclick="showModel(3)" class="hover:underline">Modelo 5 – Minimalista</button>
+</nav>
+
+<!-- CONTAINER -->
+<div class="max-w-6xl mx-auto px-6 py-6">
+
+<!-- ================= MODELO 1 ================= -->
+<section id="model1">
+  <h1 class="text-2xl font-semibold mb-4">461ª Reunião Ordinária – CMS Montes Claros</h1>
+
+  <!-- PROPRIEDADES -->
+  <div class="bg-white rounded border p-4 mb-6 text-sm grid grid-cols-3 gap-4">
+    <div><strong>Data:</strong> 23/01/2026</div>
+    <div><strong>Horário:</strong> 14h às 17h</div>
+    <div><strong>Local:</strong> Auditório da SMS</div>
+    <div><strong>Tipo:</strong> Ordinária</div>
+    <div><strong>Presidente:</strong> João da Silva</div>
+    <div><strong>Status:</strong> Em andamento</div>
+  </div>
+
+  <!-- COLUNAS -->
+  <div class="grid grid-cols-12 gap-6">
+
+    <!-- LATERAL -->
+    <aside class="col-span-4 space-y-4">
+
+      <div class="bg-white border rounded p-3">
+        <h3 class="font-medium mb-2">✔ Checklist</h3>
+        <ul class="text-sm space-y-1">
+          <li>☑ Convocação enviada</li>
+          <li>☑ Lista de presença</li>
+          <li>☐ Ata publicada</li>
+        </ul>
+      </div>
+
+      <div class="bg-white border rounded p-3">
+        <h3 class="font-medium mb-2">👥 Presenças</h3>
+        <p class="text-sm">18 Titulares · 4 Suplentes</p>
+      </div>
+
+      <div class="bg-white border rounded p-3">
+        <h3 class="font-medium mb-2">❗ Ausências justificadas</h3>
+        <p class="text-sm">Maria Souza – Motivo: saúde</p>
+      </div>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="col-span-8 space-y-4">
+      <div class="bg-white border rounded p-4 min-h-[300px]">
+        <h3 class="font-medium mb-2">📝 Notas da reunião</h3>
+        <p class="text-sm text-gray-600">
+          Discussão sobre financiamento da Atenção Básica. Conselheiros destacaram...
+        </p>
+      </div>
+
+      <div class="bg-white border rounded p-4">
+        <h3 class="font-medium mb-2">📌 Encaminhamentos</h3>
+        <ul class="text-sm list-disc ml-5">
+          <li>Ofício à Secretaria de Saúde</li>
+          <li>Agendar reunião extraordinária</li>
+        </ul>
+      </div>
+    </main>
+
+  </div>
+</section>
+
+<!-- ================= MODELO 3 ================= -->
+<section id="model2" class="hidden">
+  <h1 class="text-2xl font-semibold mb-4">461ª Reunião Ordinária – CMS Montes Claros</h1>
+
+  <div class="bg-white border rounded p-4 mb-4 text-sm grid grid-cols-3 gap-4">
+    <div><strong>Data:</strong> 23/01/2026</div>
+    <div><strong>Horário:</strong> 14h</div>
+    <div><strong>Local:</strong> Auditório SMS</div>
+  </div>
+
+  <details open class="mb-4 bg-white border rounded p-4">
+    <summary class="font-medium cursor-pointer">▶ Pré-reunião</summary>
+    <ul class="text-sm mt-2 space-y-1">
+      <li>☑ Convocação</li>
+      <li>☑ Pauta definida</li>
+      <li>📄 Documentos anexados</li>
+    </ul>
+  </details>
+
+  <details open class="mb-4 bg-white border rounded p-4">
+    <summary class="font-medium cursor-pointer">▶ Durante a reunião</summary>
+    <p class="text-sm mt-2">Presenças registradas · Discussões em andamento</p>
+    <div class="mt-3 border rounded p-3 text-sm">
+      Debate sobre relatório financeiro trimestral...
+    </div>
+  </details>
+
+  <details class="bg-white border rounded p-4">
+    <summary class="font-medium cursor-pointer">▶ Pós-reunião</summary>
+    <ul class="text-sm mt-2 space-y-1">
+      <li>📝 Redigir ata</li>
+      <li>📤 Publicar no site</li>
+    </ul>
+  </details>
+</section>
+
+<!-- ================= MODELO 5 ================= -->
+<section id="model3" class="hidden">
+  <h1 class="text-2xl font-semibold mb-4">461ª Reunião Ordinária – CMS Montes Claros</h1>
+
+  <div class="bg-white border rounded p-4 mb-4 text-sm grid grid-cols-3 gap-4">
+    <div><strong>Data:</strong> 23/01/2026</div>
+    <div><strong>Tipo:</strong> Ordinária</div>
+    <div><strong>Status:</strong> Concluída</div>
+  </div>
+
+  <div class="bg-white border rounded p-6 min-h-[350px] mb-4">
+    <h3 class="font-medium mb-2">📝 Registro principal</h3>
+    <p class="text-sm text-gray-600">
+      Às 14h iniciou-se a reunião sob presidência de João da Silva...
+    </p>
+  </div>
+
+  <details class="bg-white border rounded p-4">
+    <summary class="font-medium cursor-pointer">▶ Apoio operacional</summary>
+    <div class="grid grid-cols-2 gap-4 mt-3 text-sm">
+      <div>✔ Checklist</div>
+      <div>👥 Presenças</div>
+      <div>📌 Demandas</div>
+      <div>📄 Documentos</div>
+    </div>
+  </details>
+</section>
+
+</div>
+
+<script>
+  function showModel(n) {
+    document.getElementById('model1').classList.add('hidden');
+    document.getElementById('model2').classList.add('hidden');
+    document.getElementById('model3').classList.add('hidden');
+    document.getElementById('model' + n).classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
